@@ -32,7 +32,6 @@ jobs:
       run: |
         TOKEN=1197345943:AAF-ZoDQyubKBihGniH81hzcp63KpKdnUqE	
         chat_ID=-1001669405259
-        cd /root/pixiv
         for i in PixivImage/*
         do   
         curl -F chat_id=$chat_ID -F photo=@"$i" https://api.telegram.org/bot$TOKEN/sendPhoto
